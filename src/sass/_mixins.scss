@@ -1,0 +1,95 @@
+@mixin mainContainer($width, $height, $gap) {
+    display: flex;
+    width: $width;
+    height: $height;
+    gap: $gap;
+}
+
+@mixin btn($width, $height, $fontSize) {
+    width: $width;
+    height: $height;
+    background-color: $azulEscuro;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    font-size: $fontSize;
+    cursor: pointer;
+}
+
+@mixin header($fontSize) {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    color: $azulEscuro;
+    margin-top: 20px;
+
+    & h1 {
+        font-size: $fontSize;
+        font-weight: 800;
+    }
+
+    & div.icon {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+    }
+
+    & .icon {
+        position: absolute;
+        right: 20px;
+        cursor: pointer;
+    }
+}
+
+@mixin menu($widthMenu, $heightMenu, $widthA, $heightA, $fontSizeA) {
+    &.menu-disabled {
+        display: none;
+    }
+
+    &.menu-active {
+        display: flex;
+    }
+
+    width: $widthMenu;
+    height: $heightMenu;
+    background-color: #C8EDF7;
+    position: absolute;
+    right: 0;
+    top: -20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    z-index: 1000;
+
+    & .menu-title {
+        color: $azulEscuro;
+        margin-top: 10px;
+
+        & .menu-icon {
+            position: absolute;
+            left: 10px;
+            cursor: pointer;
+        }
+    }
+
+    & .link-item a {
+        background-color: white;
+        width: $widthA;
+        height: $heightA;
+        border-radius: 20px;
+        font-size: $fontSizeA;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        text-decoration: none;
+        color: $azulEscuro;
+        font-weight: bold;
+    }
+}

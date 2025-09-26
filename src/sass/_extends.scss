@@ -1,0 +1,31 @@
+%cadastroLogin {
+    height: 400px;
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: $azulEscuro;
+    gap: 15px;
+
+    & .input-container {
+        width: 100%;
+        
+
+        & p {
+            font-size: 1.1em
+        }
+
+        & input {
+            width: 100%;
+            padding-left: 10px;
+            height: 40px;
+            border-radius: 12px;
+            border: none;
+        }
+    }
+
+    & button {
+        @include btn(120px, 50px, 1.2rem)
+    }
+}
