@@ -106,7 +106,7 @@ const ButtonES = ({ tipo, cName }) => {
                },
                {
                   imagem: imgMaxCrea,
-                  link: 'https://www.maxtitanium.com.br/100-whey-refil-900g/p?skuid=1495',
+                  link: 'https://www.maxtitanium.com.br/creatine-pote-300g/p?skuid=31',
                },
                {
                   imagem: imgDuxCrea,
