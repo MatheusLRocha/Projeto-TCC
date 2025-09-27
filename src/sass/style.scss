@@ -793,13 +793,13 @@ header {
 
 @media screen and (min-width: 1441px) {
     .main-container {
-        width: 1300px;
-        height: 700px;
+        width: 900px;
+        height: 650px;
         gap: 35px;
 
         & button {
-            width: 350px;
-            height: 200px;
+            width: 270px;
+            height: 180px;
         }
     }
 
@@ -808,8 +808,8 @@ header {
     }
 
     .container-types {
-        width: 1350px;
-        height: 800px;
+        width: 1000px;
+        height: 750px;
 
         & section {
             & button {
@@ -820,7 +820,7 @@ header {
         }
 
         & article {
-            height: 600px;
+            height: 550px;
 
             & .alimentos {
                 & .alimento {
@@ -832,8 +832,8 @@ header {
     }
 
     .exerc-resp {
-        width: 1350px;
-        height: 800px;
+        width: 1000px;
+        height: 700px;
 
         section {
             font-size: 2em;
@@ -841,8 +841,8 @@ header {
     }
 
     .sup-resp {
-        width: 1350px;
-        height: 800px;
+        width: 1000px;
+        height: 700px;
 
         section {
             flex-direction: center;

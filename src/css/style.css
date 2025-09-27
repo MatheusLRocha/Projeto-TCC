@@ -883,20 +883,20 @@ header .icon {
 }
 @media screen and (min-width: 1441px) {
   .main-container {
-    width: 1300px;
-    height: 700px;
+    width: 900px;
+    height: 650px;
     gap: 35px;
   }
   .main-container button {
-    width: 350px;
-    height: 200px;
+    width: 270px;
+    height: 180px;
   }
   .main-dieta {
     width: 700px;
   }
   .container-types {
-    width: 1350px;
-    height: 800px;
+    width: 1000px;
+    height: 750px;
   }
   .container-types section button {
     width: 480px;
@@ -904,22 +904,22 @@ header .icon {
     font-size: 1.5em;
   }
   .container-types article {
-    height: 600px;
+    height: 550px;
   }
   .container-types article .alimentos .alimento {
     width: 550px;
     padding: 40px;
   }
   .exerc-resp {
-    width: 1350px;
-    height: 800px;
+    width: 1000px;
+    height: 700px;
   }
   .exerc-resp section {
     font-size: 2em;
   }
   .sup-resp {
-    width: 1350px;
-    height: 800px;
+    width: 1000px;
+    height: 700px;
   }
   .sup-resp section {
     flex-direction: center;
