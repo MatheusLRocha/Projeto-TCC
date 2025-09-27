@@ -9,8 +9,10 @@ const SupResp = ({ classActive, results, onClick }) => {
                 <section>
                     {
                        <>
-                            <h3>{results.nome}</h3>
-                            <p>{results.texto}</p>
+                            <div>
+                                <h3>{results.nome}</h3>
+                                <p>{results.texto}</p>
+                            </div>
                             <article>
                                 {
                                     results.referencias.map((referencia, index) => (

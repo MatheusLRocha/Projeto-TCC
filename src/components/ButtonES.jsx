@@ -31,9 +31,9 @@ const ButtonES = ({ tipo, cName, amb }) => {
       // }
 
      if (tipo === 'Peito' && amb === 'casa') {
-         conteudo = ['Flexão padrão', 'Flexão declinada', 'Flexão declinada'];
+         conteudo = ['Flexão padrão', 'Flexão declinada', 'Flexão inclinada'];
      } else if (tipo === 'Ombro' && amb === 'casa') {
-         conteudo = ['Elevação lateral com mochila', 'Elevação lateral com mochila', 'Crucifixo inverso com mochila'];
+         conteudo = ['Elevação lateral com mochila', 'Elevação frontal com mochila', 'Crucifixo inverso com mochila'];
      } else if (tipo === 'Costa' && amb === 'casa') {
          conteudo = ['Barra com pegada pronada', 'Barra com pegada supinada'];
      } else if (tipo === 'Braço' && amb === 'casa') {

@@ -296,6 +296,7 @@ header .icon {
   color: white;
   border-radius: 12px;
   border: none;
+  cursor: pointer;
 }
 .container-types article {
   height: 80%;
@@ -732,7 +733,7 @@ header .icon {
     color: black;
   }
   .container-types article .alimentos .alimento {
-    width: 340px;
+    width: 350px;
     background-color: #a2e5f7;
     padding: 8px;
     border-radius: 12px;
@@ -848,7 +849,8 @@ header .icon {
     width: 700px;
   }
   .sup-resp {
-    height: 650px;
+    height: 580px;
+    width: 700px;
   }
   .container_criador .criador {
     gap: 20px;
@@ -864,10 +866,89 @@ header .icon {
   .container_criador .card_link {
     height: 140px;
   }
+  .container-types {
+    width: 800px;
+    height: 550px;
+  }
+  .container-types section button {
+    width: 350px;
+    height: 110px;
+  }
+  .container-types article {
+    height: 400px;
+  }
+  .container-types article .alimentos .alimento {
+    width: 400px;
+  }
 }
 @media screen and (min-width: 1441px) {
+  .main-container {
+    width: 1300px;
+    height: 700px;
+    gap: 35px;
+  }
+  .main-container button {
+    width: 350px;
+    height: 200px;
+  }
   .main-dieta {
     width: 700px;
+  }
+  .container-types {
+    width: 1350px;
+    height: 800px;
+  }
+  .container-types section button {
+    width: 480px;
+    height: 150px;
+    font-size: 1.5em;
+  }
+  .container-types article {
+    height: 600px;
+  }
+  .container-types article .alimentos .alimento {
+    width: 550px;
+    padding: 40px;
+  }
+  .exerc-resp {
+    width: 1350px;
+    height: 800px;
+  }
+  .exerc-resp section {
+    font-size: 2em;
+  }
+  .sup-resp {
+    width: 1350px;
+    height: 800px;
+  }
+  .sup-resp section {
+    flex-direction: center;
+    justify-content: space-evenly;
+    height: 500px;
+  }
+}
+@media screen and (min-width: 2000px) {
+  .container-types {
+    width: 1950px;
+    height: 800px;
+  }
+  .container-types section button {
+    width: 550px;
+    height: 180px;
+    font-size: 1.5em;
+  }
+  .container-types article {
+    height: 480px;
+  }
+  .container-types article .alimentos .alimento {
+    width: 480px;
+    padding: 30px;
+  }
+  .exerc-resp {
+    width: 1950px;
+  }
+  .sup-resp {
+    width: 1950px;
   }
 }
 
