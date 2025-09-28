@@ -4,7 +4,7 @@ const NavigateButton = ({ path, title }) => {
     return(
         <>
             <Link to={`${path}`}>
-                <button>{title}</button>
+                {title}
             </Link>
         </>
     );

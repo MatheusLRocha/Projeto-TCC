@@ -10,25 +10,33 @@
     font-family: "JetBrains Mono", monospace,  sans-serif;
 }
 
-body {
-    background-color: $azulClaro;
-}
-
 #root {
-    height: 100vh;
-    width: 100vw;
+    height: 100dvh;
+    width: 100dvw;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: $azulClaro;
 }
 
 header {
-   @include header(1.3rem)
+   @include header(1.2rem, calc(2vw + 1rem), 4rem);
+
+   & .icon {
+    & a {
+        font-size: clamp(1rem, calc(3vw + 1rem), 2.3rem);
+        color: $azulEscuro;
+    }
+   }
+
+   & #menuIcon {
+    font-size: clamp(1rem, calc(2vw + 1rem), 2.3rem);
+   }
 }
 
 .menu {
-    @include menu(300px, 500px, 180px, 45px, 0.9rem)
+    @include menu(40dvh, 100dvh);
 }
 
 .container-cad_log {
@@ -36,20 +44,24 @@ header {
 }
 
 .main-container {
-    @include mainContainer(90%, 500px, 30px); 
+    @include mainContainer(21.2rem, 90%, 59.3rem, 31.2rem, 80%, 40.6rem, 20px); 
     flex-direction: column;
     align-items: center;
     overflow-y: auto;
     margin-top: 30px;
-    
 
-    & button {
-        @include btn(200px, 100px, 1rem);
+    & a {
+        @include btn(12.5rem, 17.5rem, 18.7rem, 6.2rem, 9.3rem, 10.5rem, 3vw);
+        flex-shrink: 0;
+        text-decoration: none;
     }
 }
 
+
+
 .main-calculator {
-    @include mainContainer(90%, 500px, 15px);
+    // @include mainContainer(90%, 500px, 15px);
+    @include mainContainer(21.2rem, 90%, 53.1rem, 31.2rem, 80%, 34.3rem, 20px);
     background-color: white;
     border-radius: 15px;
     padding: 30px 20px 20px 20px;
@@ -72,7 +84,8 @@ header {
     }
 
     & .btnCalc {
-        @include btn(150px, 50px, 1.3em);
+        // @include btn(150px, 50px, 1.3em);
+        @include btn(6.2rem, 70%, 11.2rem, 4.3rem, 5rem, 5.6rem, 2vw);
     }
 }
 
@@ -102,12 +115,14 @@ header {
 }
 
 .main-dieta {
-    @include mainContainer(90%, 500px, 10px);
+    // @include mainContainer(90%, 500px, 10px);
+    @include mainContainer(21.2rem, 90%, 53.1rem, 31.2rem, 80%, 34.3rem, 20px);
     flex-direction: column;
     align-items: center;
 
     & .diet-button {
-        @include btn(250px, 200px, 1.3rem);
+        // @include btn(250px, 200px, 1.3rem);
+        @include btn(12.5rem, 80%, 15.6rem, 9.3rem, 70%, 20rem, 2vw);
         margin-top: 15px;
         padding: 10px;
         font-weight: bold;
@@ -235,12 +250,16 @@ header {
 }
 
 .main-exercise, .main-suplement {
-    @include mainContainer(90%, 500px, 10px);
+    // @include mainContainer(90%, 500px, 10px);
+    @include mainContainer(21.2rem, 90%, 53.1rem, 23.7rem, 90%, 28rem, 15px);
     flex-direction: column;
     align-items: center;
+    overflow-y: auto;
 
     & .btnExercise, .btnSuplement {
-        @include btn(250px, 100px, 1.4em);
+        // @include btn(250px, 100px, 1.4em);
+        @include btn(12.5rem, 90%, 18.1rem, 7.5rem, 70%, 8.1rem, 7vw);
+        flex-shrink: 0;
     }
 }
 
@@ -319,7 +338,7 @@ header {
 }
 
 .main-criadores {
-    @include mainContainer(90%, 500px, 15px);
+    // @include mainContainer(90%, 500px, 15px);
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
@@ -366,7 +385,7 @@ header {
 // }
 
 .container_criador {
-    @include mainContainer(330px, 480px, 20px);
+    // @include mainContainer(330px, 480px, 20px);
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -470,420 +489,448 @@ header {
 }
 
 @media screen and (min-width: 768px) {
-    header {
-        @include header(2.3rem);
-    }
-
-    nav {
-        & input {
-            height: 45px;
-            width: 250px;
-            font-size: 1.2em;
-        }
-
-        & .btnSearch {
-            height: 45px;
-            width: 120px;
-            font-size: 1.2em;
-        }
-    }
-
-    .menu {
-        @include menu(400px, 570px, 200px, 50px, 1.2em);
-    }
-
     .main-container {
-        height: auto;
         flex-direction: row;
-        justify-content: center;
-        align-items: center;
         flex-wrap: wrap;
-        gap: 15px;
-
-        & button {
-            @include btn(200px, 120px, 1.3rem)
-        }
-    }
-
-    .main-calculator {
-        gap: 20px;
-    }
-
-    .calc-resp {
-        position: absolute;
-        width: 500px;
-        height: 450px;
-        background-color: white;
         justify-content: center;
         align-items: center;
+        // display: grid;
+        // grid-template-columns: repeat(3, 1fr);
+        // grid-template-rows: repeat(3, 1fr);
+        // justify-items: center;
 
-        section {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-            text-align: center;
-            font-size: 1.3em;
-        }
+        // & a:nth-child(7) {
+        //     grid-column: 2;
+        // }
     }
 
     .main-dieta {
-        @include mainContainer(90%, 500px, 50px);
         flex-direction: row;
         justify-content: center;
-
-        & .diet-button {
-            @include btn(280px, 320px, 1.3rem);
-        }
-    }
-
-    .diet-resp {
-        width: 650px;
-        overflow-y: hidden;
-
-        article {
-            flex-direction: row;
-            flex-wrap: wrap;
-
-            & .card-resp {
-                width: 200px;
-                
-            }
-        }
-    }
-
-    .diet-resp header {
-        position: sticky;
-        top: 0;
-        width: 100%;
-        background-color: white;
-        z-index: 100;
-        padding: 10px 0;
-        margin: 0;
-    }
-
-    .container-types {
-        width: 650px;
-        height: 500px;
-        
-        & section {
-            & button {
-                width: 280px;
-                height: 100px;
-                background-color: $azulEscuro;
-                color: white;
-                border-radius: 12px;
-                border: none;
-                font-size: 1.3em;
-            }
-        }
-
-        & article {
-            height: 70%;
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            gap: 20px;
-            text-align: center;
-            color: $azulEscuro;
-            font-size: 1.2em;
-
-            & .alimentos {
-                overflow-y: auto;
-                display: flex;
-                align-items: center;
-                flex-direction: column;
-                gap: 20px;
-                color: black;
-
-                & .alimento {
-                    width: 350px;
-                    background-color: $azulClaro;
-                    padding: 8px;
-                    border-radius: 12px;
-                }
-            }
-        }
-        
     }
 
     .main-exercise, .main-suplement {
         flex-direction: row;
+        justify-content: center;
         flex-wrap: wrap;
-        justify-content: center;
-        height: auto;
-
-        & .btnExercise, .btnSuplement {
-            height: 120px;
-        }
-    }
-
-    .exerc-resp {
-        position: absolute;
-        width: 650px;
-        height: 450px;
-        background-color: white;
-        justify-content: center;
-        align-items: center;
-        border-radius: 15px;
-
-        section {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-            text-align: center;
-            font-size: 1.3em;
-            height: 250px;
-        }
-    }
-
-    .sup-resp {
-        width: 650px;
-
-        section {
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-            padding: 20px;
-            gap: 10px;
-            z-index: 10;
-            font-size: 1.2em;
-        }
-
-        article {
-            flex-direction: row;
-            flex-wrap: wrap;
-
-            & a {
-                min-height: 200px;
-                width: 200px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-
-                & img {
-                    width: 200px;
-                    height: 200px;
-                }
-            }
-        }
-    }
-
-    .sup-resp header {
-        position: sticky;
-        top: 0;
-        width: 100%;
-        background-color: white;
-        z-index: 100;
-        padding: 10px 0;
-        margin: 0;
-    }
-
-    .main-criadores {
-        gap: 30px;
-        
-        & .player-item {
-            & .player {
-                width: 200px;
-                height: 200px;
-            }
-        }
-    }
-
-    .container_criador {
-        @include mainContainer(520px, 480px, 20px);
-
-        & .criador {
-            gap: 20px;
-            font-size: 1.8rem;
-
-            & .foto_perfil {
-                width: 100px;
-                height: 100px;
-            }
-        }
-
-        & .card_links {
-            height: 500px;
-        }
-
-        & .card_link {
-            height: 140px;
-            font-size: 1.7rem;
-        }
     }
 }
 
-@media screen and (min-width: 939px) {
-    .main-container {
-        width: 800px;
+// @media screen and (min-width: 768px) {
+//     header {
+//         @include header(2.3rem );
+//     }
 
-        & button {
-            width: 250px;
-            height: 150px;
-        }
-    }
+//     nav {
+//         & input {
+//             height: 45px;
+//             width: 250px;
+//             font-size: 1.2em;
+//         }
 
-    .main-calculator {
-        width: 800px;
-        height: auto;
-        // Ajustar depois
-    }
+//         & .btnSearch {
+//             height: 45px;
+//             width: 120px;
+//             font-size: 1.2em;
+//         }
+//     }
 
-    .calc-resp {
-        width: 800px;
-        height: 450px;
-    }
+//     .menu {
+//         @include menu(400px, 570px, 200px, 50px, 1.2em);
+//     }
 
-    .main-exercise, .main-suplement {
-        width: 700px;
-    }
+//     .main-container {
+//         height: auto;
+//         flex-direction: row;
+//         justify-content: center;
+//         align-items: center;
+//         flex-wrap: wrap;
+//         gap: 15px;
 
-    .sup-resp {
-        height: 580px;
-        width: 700px;
+//         & button {
+//             @include btn(200px, 120px, 1.3rem)
+//         }
+//     }
 
-        // Se der erro ou a tela ficar incompatível, tirar o .sup-resp daqui
-    }
+//     .main-calculator {
+//         gap: 20px;
+//     }
 
-    .container_criador {
+//     .calc-resp {
+//         position: absolute;
+//         width: 500px;
+//         height: 450px;
+//         background-color: white;
+//         justify-content: center;
+//         align-items: center;
+
+//         section {
+//             display: flex;
+//             flex-direction: column;
+//             gap: 20px;
+//             text-align: center;
+//             font-size: 1.3em;
+//         }
+//     }
+
+//     .main-dieta {
+//         @include mainContainer(90%, 500px, 50px);
+//         flex-direction: row;
+//         justify-content: center;
+
+//         & .diet-button {
+//             @include btn(280px, 320px, 1.3rem);
+//         }
+//     }
+
+//     .diet-resp {
+//         width: 650px;
+//         overflow-y: hidden;
+
+//         article {
+//             flex-direction: row;
+//             flex-wrap: wrap;
+
+//             & .card-resp {
+//                 width: 200px;
+                
+//             }
+//         }
+//     }
+
+//     .diet-resp header {
+//         position: sticky;
+//         top: 0;
+//         width: 100%;
+//         background-color: white;
+//         z-index: 100;
+//         padding: 10px 0;
+//         margin: 0;
+//     }
+
+//     .container-types {
+//         width: 650px;
+//         height: 500px;
+        
+//         & section {
+//             & button {
+//                 width: 280px;
+//                 height: 100px;
+//                 background-color: $azulEscuro;
+//                 color: white;
+//                 border-radius: 12px;
+//                 border: none;
+//                 font-size: 1.3em;
+//             }
+//         }
+
+//         & article {
+//             height: 70%;
+//             width: 100%;
+//             display: flex;
+//             flex-direction: column;
+//             justify-content: center;
+//             gap: 20px;
+//             text-align: center;
+//             color: $azulEscuro;
+//             font-size: 1.2em;
+
+//             & .alimentos {
+//                 overflow-y: auto;
+//                 display: flex;
+//                 align-items: center;
+//                 flex-direction: column;
+//                 gap: 20px;
+//                 color: black;
+
+//                 & .alimento {
+//                     width: 350px;
+//                     background-color: $azulClaro;
+//                     padding: 8px;
+//                     border-radius: 12px;
+//                 }
+//             }
+//         }
+        
+//     }
+
+//     .main-exercise, .main-suplement {
+//         flex-direction: row;
+//         flex-wrap: wrap;
+//         justify-content: center;
+//         height: auto;
+
+//         & .btnExercise, .btnSuplement {
+//             height: 120px;
+//         }
+//     }
+
+//     .exerc-resp {
+//         position: absolute;
+//         width: 650px;
+//         height: 450px;
+//         background-color: white;
+//         justify-content: center;
+//         align-items: center;
+//         border-radius: 15px;
+
+//         section {
+//             display: flex;
+//             flex-direction: column;
+//             gap: 20px;
+//             text-align: center;
+//             font-size: 1.3em;
+//             height: 250px;
+//         }
+//     }
+
+//     .sup-resp {
+//         width: 650px;
+
+//         section {
+//             display: flex;
+//             flex-direction: column;
+//             justify-content: flex-start;
+//             padding: 20px;
+//             gap: 10px;
+//             z-index: 10;
+//             font-size: 1.2em;
+//         }
+
+//         article {
+//             flex-direction: row;
+//             flex-wrap: wrap;
+
+//             & a {
+//                 min-height: 200px;
+//                 width: 200px;
+//                 display: flex;
+//                 justify-content: center;
+//                 align-items: center;
+
+//                 & img {
+//                     width: 200px;
+//                     height: 200px;
+//                 }
+//             }
+//         }
+//     }
+
+//     .sup-resp header {
+//         position: sticky;
+//         top: 0;
+//         width: 100%;
+//         background-color: white;
+//         z-index: 100;
+//         padding: 10px 0;
+//         margin: 0;
+//     }
+
+//     .main-criadores {
+//         gap: 30px;
+        
+//         & .player-item {
+//             & .player {
+//                 width: 200px;
+//                 height: 200px;
+//             }
+//         }
+//     }
+
+//     .container_criador {
+//         @include mainContainer(520px, 480px, 20px);
+
+//         & .criador {
+//             gap: 20px;
+//             font-size: 1.8rem;
+
+//             & .foto_perfil {
+//                 width: 100px;
+//                 height: 100px;
+//             }
+//         }
+
+//         & .card_links {
+//             height: 500px;
+//         }
+
+//         & .card_link {
+//             height: 140px;
+//             font-size: 1.7rem;
+//         }
+//     }
+// }
+
+// @media screen and (min-width: 939px) {
+//     .main-container {
+//         width: 800px;
+
+//         & button {
+//             width: 250px;
+//             height: 150px;
+//         }
+//     }
+
+//     .main-calculator {
+//         width: 800px;
+//         height: auto;
+//         // Ajustar depois
+//     }
+
+//     .calc-resp {
+//         width: 800px;
+//         height: 450px;
+//     }
+
+//     .main-exercise, .main-suplement {
+//         width: 700px;
+//     }
+
+//     .sup-resp {
+//         height: 580px;
+//         width: 700px;
+
+//         // Se der erro ou a tela ficar incompatível, tirar o .sup-resp daqui
+//     }
+
+//     .container_criador {
        
 
-        & .criador {
-            gap: 20px;
-            font-size: 2rem;
+//         & .criador {
+//             gap: 20px;
+//             font-size: 2rem;
 
-            & .foto_perfil {
-                width: 100px;
-                height: 100px;
-            }
-        }
+//             & .foto_perfil {
+//                 width: 100px;
+//                 height: 100px;
+//             }
+//         }
 
-        & .card_links {
-            height: 500px;
-        }
+//         & .card_links {
+//             height: 500px;
+//         }
 
-        & .card_link {
-            height: 140px;
-        }
-    }
+//         & .card_link {
+//             height: 140px;
+//         }
+//     }
 
-    .container-types {
-        width: 800px;
-        height: 550px;
+//     .container-types {
+//         width: 800px;
+//         height: 550px;
 
-        & section {
-            & button {
-                width: 350px;
-                height: 110px;
-            }
-        }
+//         & section {
+//             & button {
+//                 width: 350px;
+//                 height: 110px;
+//             }
+//         }
 
-        & article {
-            height: 400px;
+//         & article {
+//             height: 400px;
 
-            & .alimentos {
-                & .alimento {
-                    width: 400px;
-                }
-            }
-        }
-    }
-}
+//             & .alimentos {
+//                 & .alimento {
+//                     width: 400px;
+//                 }
+//             }
+//         }
+//     }
+// }
 
-@media screen and (min-width: 1441px) {
-    .main-container {
-        width: 900px;
-        height: 650px;
-        gap: 35px;
+// @media screen and (min-width: 1441px) {
+//     .main-container {
+//         width: 900px;
+//         height: 650px;
+//         gap: 35px;
 
-        & button {
-            width: 270px;
-            height: 180px;
-        }
-    }
+//         & button {
+//             width: 270px;
+//             height: 180px;
+//         }
+//     }
 
-    .main-dieta {
-        width: 700px;
-    }
+//     .main-dieta {
+//         width: 700px;
+//     }
 
-    .container-types {
-        width: 1000px;
-        height: 750px;
+//     .container-types {
+//         width: 1000px;
+//         height: 750px;
 
-        & section {
-            & button {
-                width: 480px;
-                height: 150px;
-                font-size: 1.5em;
-            }
-        }
+//         & section {
+//             & button {
+//                 width: 480px;
+//                 height: 150px;
+//                 font-size: 1.5em;
+//             }
+//         }
 
-        & article {
-            height: 550px;
+//         & article {
+//             height: 550px;
 
-            & .alimentos {
-                & .alimento {
-                    width: 550px;
-                    padding: 40px;
-                }
-            }
-        }
-    }
+//             & .alimentos {
+//                 & .alimento {
+//                     width: 550px;
+//                     padding: 40px;
+//                 }
+//             }
+//         }
+//     }
 
-    .exerc-resp {
-        width: 1000px;
-        height: 700px;
+//     .exerc-resp {
+//         width: 1000px;
+//         height: 700px;
 
-        section {
-            font-size: 2em;
-        }
-    }
+//         section {
+//             font-size: 2em;
+//         }
+//     }
 
-    .sup-resp {
-        width: 1000px;
-        height: 700px;
+//     .sup-resp {
+//         width: 1000px;
+//         height: 700px;
 
-        section {
-            flex-direction: center;
-            justify-content: space-evenly;
-            height: 500px;
-        }
+//         section {
+//             flex-direction: center;
+//             justify-content: space-evenly;
+//             height: 500px;
+//         }
 
         
-    }
-}
+//     }
+// }
 
-@media screen and (min-width: 2000px) {
-    .container-types {
-        width: 1950px;
-        height: 800px;
+// @media screen and (min-width: 2000px) {
+//     .container-types {
+//         width: 1950px;
+//         height: 800px;
 
-        & section {
-            & button {
-                width: 550px;
-                height: 180px;
-                font-size: 1.5em;
-            }
-        }
+//         & section {
+//             & button {
+//                 width: 550px;
+//                 height: 180px;
+//                 font-size: 1.5em;
+//             }
+//         }
 
-        & article {
-            height: 480px;
+//         & article {
+//             height: 480px;
 
-            & .alimentos {
-                & .alimento {
-                    width: 480px;
-                    padding: 30px;
-                }
-            }
-        }
-    }
+//             & .alimentos {
+//                 & .alimento {
+//                     width: 480px;
+//                     padding: 30px;
+//                 }
+//             }
+//         }
+//     }
 
-     .exerc-resp {
-        width: 1950px;
-    }
+//      .exerc-resp {
+//         width: 1950px;
+//     }
 
-    .sup-resp {
-        width: 1950px;
-    }
-}
+//     .sup-resp {
+//         width: 1950px;
+//     }
+// }

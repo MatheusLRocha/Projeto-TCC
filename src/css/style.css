@@ -22,17 +22,6 @@
   border-radius: 12px;
   border: none;
 }
-.container-cad_log button {
-  width: 120px;
-  height: 50px;
-  background-color: #124580;
-  border-radius: 5px;
-  border: none;
-  color: white;
-  font-size: 1.2rem;
-  cursor: pointer;
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -40,17 +29,14 @@
   font-family: "JetBrains Mono", monospace, sans-serif;
 }
 
-body {
-  background-color: #a2e5f7;
-}
-
 #root {
-  height: 100vh;
-  width: 100vw;
+  height: 100dvh;
+  width: 100dvw;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: #a2e5f7;
 }
 
 header {
@@ -64,7 +50,7 @@ header {
   margin-top: 20px;
 }
 header h1 {
-  font-size: 1.3rem;
+  font-size: clamp(1.2rem, 2vw + 1rem, 4rem);
   font-weight: 800;
 }
 header div.icon {
@@ -78,10 +64,17 @@ header .icon {
   right: 20px;
   cursor: pointer;
 }
+header .icon a {
+  font-size: clamp(1rem, 3vw + 1rem, 2.3rem);
+  color: #124580;
+}
+header #menuIcon {
+  font-size: clamp(1rem, 2vw + 1rem, 2.3rem);
+}
 
 .menu {
-  width: 300px;
-  height: 500px;
+  width: 40dvh;
+  height: 100dvh;
   background-color: #C8EDF7;
   position: absolute;
   right: 0;
@@ -101,22 +94,31 @@ header .icon {
 .menu .menu-title {
   color: #124580;
   margin-top: 10px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
 }
 .menu .menu-title .menu-icon {
   position: absolute;
   left: 10px;
   cursor: pointer;
+  font-size: 2.7rem;
 }
-.menu .link-item a {
+.menu .link-item {
+  display: block;
   background-color: white;
-  width: 180px;
-  height: 45px;
+  width: clamp(7.5rem, 80%, 10rem);
+  height: 3.5rem;
   border-radius: 20px;
-  font-size: 0.9rem;
+  font-size: 1.2rem;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
+  padding: 8px;
+  cursor: pointer;
   text-decoration: none;
   color: #124580;
   font-weight: bold;
@@ -124,30 +126,36 @@ header .icon {
 
 .main-container {
   display: flex;
-  width: 90%;
-  height: 500px;
-  gap: 30px;
+  width: clamp(21.2rem, 90%, 59.3rem);
+  height: clamp(31.2rem, 80%, 40.6rem);
+  gap: 20px;
   flex-direction: column;
   align-items: center;
   overflow-y: auto;
   margin-top: 30px;
 }
-.main-container button {
-  width: 200px;
-  height: 100px;
+.main-container a {
+  width: 17.5rem;
+  height: 9.3rem;
   background-color: #124580;
   border-radius: 5px;
   border: none;
   color: white;
-  font-size: 1rem;
+  font-size: clamp(1.1rem, 3vw, 1.5rem);
   cursor: pointer;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  text-decoration: none;
 }
 
 .main-calculator {
   display: flex;
-  width: 90%;
-  height: 500px;
-  gap: 15px;
+  width: clamp(21.2rem, 90%, 53.1rem);
+  height: clamp(31.2rem, 80%, 34.3rem);
+  gap: 20px;
   background-color: white;
   border-radius: 15px;
   padding: 30px 20px 20px 20px;
@@ -168,14 +176,18 @@ header .icon {
   font-size: 1em;
 }
 .main-calculator .btnCalc {
-  width: 150px;
-  height: 50px;
+  width: clamp(6.2rem, 70%, 11.2rem);
+  height: 5rem;
   background-color: #124580;
   border-radius: 5px;
   border: none;
   color: white;
-  font-size: 1.3em;
+  font-size: clamp(1.1rem, 2vw, 1.5rem);
   cursor: pointer;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .calc-resp {
@@ -204,21 +216,25 @@ header .icon {
 
 .main-dieta {
   display: flex;
-  width: 90%;
-  height: 500px;
-  gap: 10px;
+  width: clamp(21.2rem, 90%, 53.1rem);
+  height: clamp(31.2rem, 80%, 34.3rem);
+  gap: 20px;
   flex-direction: column;
   align-items: center;
 }
 .main-dieta .diet-button {
-  width: 250px;
-  height: 200px;
+  width: clamp(12.5rem, 80%, 15.6rem);
+  height: clamp(9.3rem, 70%, 20rem);
   background-color: #124580;
   border-radius: 5px;
   border: none;
   color: white;
-  font-size: 1.3rem;
+  font-size: clamp(1.1rem, 2vw, 1.5rem);
   cursor: pointer;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-top: 15px;
   padding: 10px;
   font-weight: bold;
@@ -333,21 +349,27 @@ header .icon {
 
 .main-exercise, .main-suplement {
   display: flex;
-  width: 90%;
-  height: 500px;
-  gap: 10px;
+  width: clamp(21.2rem, 90%, 53.1rem);
+  height: clamp(23.7rem, 90%, 28rem);
+  gap: 15px;
   flex-direction: column;
   align-items: center;
+  overflow-y: auto;
 }
 .main-exercise .btnExercise, .main-exercise .btnSuplement, .main-suplement .btnExercise, .main-suplement .btnSuplement {
-  width: 250px;
-  height: 100px;
+  width: clamp(12.5rem, 90%, 18.1rem);
+  height: clamp(7.5rem, 70%, 8.1rem);
   background-color: #124580;
   border-radius: 5px;
   border: none;
   color: white;
-  font-size: 1.4em;
+  font-size: clamp(1.1rem, 7vw, 1.5rem);
   cursor: pointer;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
 }
 
 .exerc-resp {
@@ -419,10 +441,6 @@ header .icon {
 }
 
 .main-criadores {
-  display: flex;
-  width: 90%;
-  height: 500px;
-  gap: 15px;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
@@ -455,10 +473,6 @@ header .icon {
 }
 
 .container_criador {
-  display: flex;
-  width: 330px;
-  height: 480px;
-  gap: 20px;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -549,406 +563,20 @@ header .icon {
 }
 
 @media screen and (min-width: 768px) {
-  header {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    top: 0;
-    color: #124580;
-    margin-top: 20px;
-  }
-  header h1 {
-    font-size: 2.3rem;
-    font-weight: 800;
-  }
-  header div.icon {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  header .icon {
-    position: absolute;
-    right: 20px;
-    cursor: pointer;
-  }
-  nav input {
-    height: 45px;
-    width: 250px;
-    font-size: 1.2em;
-  }
-  nav .btnSearch {
-    height: 45px;
-    width: 120px;
-    font-size: 1.2em;
-  }
-  .menu {
-    width: 400px;
-    height: 570px;
-    background-color: #C8EDF7;
-    position: absolute;
-    right: 0;
-    top: -20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    z-index: 1000;
-  }
-  .menu.menu-disabled {
-    display: none;
-  }
-  .menu.menu-active {
-    display: flex;
-  }
-  .menu .menu-title {
-    color: #124580;
-    margin-top: 10px;
-  }
-  .menu .menu-title .menu-icon {
-    position: absolute;
-    left: 10px;
-    cursor: pointer;
-  }
-  .menu .link-item a {
-    background-color: white;
-    width: 200px;
-    height: 50px;
-    border-radius: 20px;
-    font-size: 1.2em;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    text-decoration: none;
-    color: #124580;
-    font-weight: bold;
-  }
   .main-container {
-    height: auto;
     flex-direction: row;
-    justify-content: center;
-    align-items: center;
     flex-wrap: wrap;
-    gap: 15px;
-  }
-  .main-container button {
-    width: 200px;
-    height: 120px;
-    background-color: #124580;
-    border-radius: 5px;
-    border: none;
-    color: white;
-    font-size: 1.3rem;
-    cursor: pointer;
-  }
-  .main-calculator {
-    gap: 20px;
-  }
-  .calc-resp {
-    position: absolute;
-    width: 500px;
-    height: 450px;
-    background-color: white;
     justify-content: center;
     align-items: center;
-  }
-  .calc-resp section {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    text-align: center;
-    font-size: 1.3em;
   }
   .main-dieta {
-    display: flex;
-    width: 90%;
-    height: 500px;
-    gap: 50px;
     flex-direction: row;
     justify-content: center;
-  }
-  .main-dieta .diet-button {
-    width: 280px;
-    height: 320px;
-    background-color: #124580;
-    border-radius: 5px;
-    border: none;
-    color: white;
-    font-size: 1.3rem;
-    cursor: pointer;
-  }
-  .diet-resp {
-    width: 650px;
-    overflow-y: hidden;
-  }
-  .diet-resp article {
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-  .diet-resp article .card-resp {
-    width: 200px;
-  }
-  .diet-resp header {
-    position: sticky;
-    top: 0;
-    width: 100%;
-    background-color: white;
-    z-index: 100;
-    padding: 10px 0;
-    margin: 0;
-  }
-  .container-types {
-    width: 650px;
-    height: 500px;
-  }
-  .container-types section button {
-    width: 280px;
-    height: 100px;
-    background-color: #124580;
-    color: white;
-    border-radius: 12px;
-    border: none;
-    font-size: 1.3em;
-  }
-  .container-types article {
-    height: 70%;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 20px;
-    text-align: center;
-    color: #124580;
-    font-size: 1.2em;
-  }
-  .container-types article .alimentos {
-    overflow-y: auto;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    gap: 20px;
-    color: black;
-  }
-  .container-types article .alimentos .alimento {
-    width: 350px;
-    background-color: #a2e5f7;
-    padding: 8px;
-    border-radius: 12px;
   }
   .main-exercise, .main-suplement {
     flex-direction: row;
+    justify-content: center;
     flex-wrap: wrap;
-    justify-content: center;
-    height: auto;
-  }
-  .main-exercise .btnExercise, .main-exercise .btnSuplement, .main-suplement .btnExercise, .main-suplement .btnSuplement {
-    height: 120px;
-  }
-  .exerc-resp {
-    position: absolute;
-    width: 650px;
-    height: 450px;
-    background-color: white;
-    justify-content: center;
-    align-items: center;
-    border-radius: 15px;
-  }
-  .exerc-resp section {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    text-align: center;
-    font-size: 1.3em;
-    height: 250px;
-  }
-  .sup-resp {
-    width: 650px;
-  }
-  .sup-resp section {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    padding: 20px;
-    gap: 10px;
-    z-index: 10;
-    font-size: 1.2em;
-  }
-  .sup-resp article {
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-  .sup-resp article a {
-    min-height: 200px;
-    width: 200px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .sup-resp article a img {
-    width: 200px;
-    height: 200px;
-  }
-  .sup-resp header {
-    position: sticky;
-    top: 0;
-    width: 100%;
-    background-color: white;
-    z-index: 100;
-    padding: 10px 0;
-    margin: 0;
-  }
-  .main-criadores {
-    gap: 30px;
-  }
-  .main-criadores .player-item .player {
-    width: 200px;
-    height: 200px;
-  }
-  .container_criador {
-    display: flex;
-    width: 520px;
-    height: 480px;
-    gap: 20px;
-  }
-  .container_criador .criador {
-    gap: 20px;
-    font-size: 1.8rem;
-  }
-  .container_criador .criador .foto_perfil {
-    width: 100px;
-    height: 100px;
-  }
-  .container_criador .card_links {
-    height: 500px;
-  }
-  .container_criador .card_link {
-    height: 140px;
-    font-size: 1.7rem;
-  }
-}
-@media screen and (min-width: 939px) {
-  .main-container {
-    width: 800px;
-  }
-  .main-container button {
-    width: 250px;
-    height: 150px;
-  }
-  .main-calculator {
-    width: 800px;
-    height: auto;
-  }
-  .calc-resp {
-    width: 800px;
-    height: 450px;
-  }
-  .main-exercise, .main-suplement {
-    width: 700px;
-  }
-  .sup-resp {
-    height: 580px;
-    width: 700px;
-  }
-  .container_criador .criador {
-    gap: 20px;
-    font-size: 2rem;
-  }
-  .container_criador .criador .foto_perfil {
-    width: 100px;
-    height: 100px;
-  }
-  .container_criador .card_links {
-    height: 500px;
-  }
-  .container_criador .card_link {
-    height: 140px;
-  }
-  .container-types {
-    width: 800px;
-    height: 550px;
-  }
-  .container-types section button {
-    width: 350px;
-    height: 110px;
-  }
-  .container-types article {
-    height: 400px;
-  }
-  .container-types article .alimentos .alimento {
-    width: 400px;
-  }
-}
-@media screen and (min-width: 1441px) {
-  .main-container {
-    width: 900px;
-    height: 650px;
-    gap: 35px;
-  }
-  .main-container button {
-    width: 270px;
-    height: 180px;
-  }
-  .main-dieta {
-    width: 700px;
-  }
-  .container-types {
-    width: 1000px;
-    height: 750px;
-  }
-  .container-types section button {
-    width: 480px;
-    height: 150px;
-    font-size: 1.5em;
-  }
-  .container-types article {
-    height: 550px;
-  }
-  .container-types article .alimentos .alimento {
-    width: 550px;
-    padding: 40px;
-  }
-  .exerc-resp {
-    width: 1000px;
-    height: 700px;
-  }
-  .exerc-resp section {
-    font-size: 2em;
-  }
-  .sup-resp {
-    width: 1000px;
-    height: 700px;
-  }
-  .sup-resp section {
-    flex-direction: center;
-    justify-content: space-evenly;
-    height: 500px;
-  }
-}
-@media screen and (min-width: 2000px) {
-  .container-types {
-    width: 1950px;
-    height: 800px;
-  }
-  .container-types section button {
-    width: 550px;
-    height: 180px;
-    font-size: 1.5em;
-  }
-  .container-types article {
-    height: 480px;
-  }
-  .container-types article .alimentos .alimento {
-    width: 480px;
-    padding: 30px;
-  }
-  .exerc-resp {
-    width: 1950px;
-  }
-  .sup-resp {
-    width: 1950px;
   }
 }
 

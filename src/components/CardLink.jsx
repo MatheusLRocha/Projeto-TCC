@@ -1,4 +1,4 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook, faInstagram, faSpotify, faSteam } from "@fortawesome/free-brands-svg-icons";
 
 const CardLink = ({ socialType, socialLink }) => {

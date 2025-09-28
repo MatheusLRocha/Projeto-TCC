@@ -1,6 +1,8 @@
 import { Menu, CircleUserRound, ArrowRightToLine, X } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import { faArrowRight, faBars, faUser } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 
 const Header = ({ title, iconH, onClickToggle }) => {
@@ -24,43 +26,26 @@ const Header = ({ title, iconH, onClickToggle }) => {
         {iconH === "usuario" ? (
           <>
             <div className="icon">
-                <Link to={'/'}><CircleUserRound size={32} color="#124580"/></Link>
-                <h3>User</h3>
+                <Link to={'/'}><FontAwesomeIcon icon={faUser} /></Link>
             </div>
           </>
         ) : iconH === 'hamburguer' ? (
           <>
-            <Menu className="icon" id="menuIcon" size={32} onClick={toggleMenu}/>
+            <FontAwesomeIcon icon={faBars} id="menuIcon" className="icon" onClick={toggleMenu}/>
 
             <div className={`menu menu-${menuClass}`}>
                 <div className="menu-title">
-                    <ArrowRightToLine size={48} className="menu-icon" onClick={toggleMenu}/>
+                    <FontAwesomeIcon icon={faArrowRight} className="menu-icon" onClick={toggleMenu}/>
                     <h1>Menu</h1>
                 </div>
-                <div className="link-item">
-                    <Link to={"/inicio"}>Início</Link>
-                </div>
-                <div className="link-item">
-                    <Link to={"/basal"}>Calculadora Basal</Link>
-                </div>
-                <div className="link-item">
-                    <Link to={"/imc"}>Calculadora IMC</Link>
-                </div>
-                <div className="link-item">
-                    <Link to={"/dieta"}>Dieta</Link>
-                </div>
-                <div className="link-item">
-                    <Link to={"/casa"}>Exercícios em Casa</Link>
-                </div>
-                <div className="link-item">
-                    <Link to={"/academia"}>Exercícios na Academia</Link>
-                </div>
-                <div className="link-item">
-                    <Link to={"/suplementos"}>Suplementos</Link>
-                </div>
-                <div className="link-item">
-                    <Link to={"/criadores"}>Criadores</Link>    
-                </div>   
+                <Link to={"/inicio"} className="link-item">Início</Link>
+                <Link to={"/basal"} className="link-item">Calculadora Basal</Link>
+                <Link to={"/imc"} className="link-item">Calculadora IMC</Link>
+                <Link to={"/dieta"} className="link-item">Dieta</Link>
+                <Link to={"/casa"} className="link-item">Exercícios em Casa</Link>
+                <Link to={"/academia"} className="link-item">Exercícios na Academia</Link>
+                <Link to={"/suplementos"} className="link-item">Suplementos</Link>
+                <Link to={"/criadores"} className="link-item">Criadores</Link>    
               </div>
           </>
 

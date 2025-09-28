@@ -1,22 +1,26 @@
-@mixin mainContainer($width, $height, $gap) {
+@mixin mainContainer($widthMinimum, $widthIdeal, $widthMaximum, $heightMinimum, $heightIdeal, $heightMaximum, $gap) {
     display: flex;
-    width: $width;
-    height: $height;
+    width: clamp($widthMinimum, $widthIdeal, $widthMaximum);
+    height: clamp($heightMinimum, $heightIdeal, $heightMaximum);
     gap: $gap;
 }
 
-@mixin btn($width, $height, $fontSize) {
-    width: $width;
-    height: $height;
+@mixin btn($widthMinimum, $widthIdeal, $widthMaximum, $heightMinimum, $heightIdeal, $heightMaximum, $fontSize) {
+    width: clamp($widthMinimum, $widthIdeal, $widthMaximum);
+    height: clamp($heightMinimum, $heightIdeal, $heightMaximum);
     background-color: $azulEscuro;
     border-radius: 5px;
     border: none;
     color: white;
-    font-size: $fontSize;
+    font-size: clamp(1.1rem, $fontSize, 1.5rem);
     cursor: pointer;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-@mixin header($fontSize) {
+@mixin header($fontSizeMinimum, $fontSizeIdeal, $fontSizeMaximum) {
     width: 100%;
     display: flex;
     justify-content: center;
@@ -27,7 +31,7 @@
     margin-top: 20px;
 
     & h1 {
-        font-size: $fontSize;
+        font-size: clamp($fontSizeMinimum, $fontSizeIdeal, $fontSizeMaximum);
         font-weight: 800;
     }
 
@@ -46,7 +50,7 @@
     }
 }
 
-@mixin menu($widthMenu, $heightMenu, $widthA, $heightA, $fontSizeA) {
+@mixin menu($widthMenu, $heightMenu) {
     &.menu-disabled {
         display: none;
     }
@@ -70,24 +74,33 @@
     & .menu-title {
         color: $azulEscuro;
         margin-top: 10px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
 
         & .menu-icon {
             position: absolute;
             left: 10px;
             cursor: pointer;
+            font-size: clamp(1.5rem, 2.7rem, 5rem);
         }
     }
 
-    & .link-item a {
+    & .link-item {
+        display: block;
         background-color: white;
-        width: $widthA;
-        height: $heightA;
+        width: clamp(7.5rem, 80%, 10rem);
+        height: clamp(3.1rem, 3.5rem, 5rem);
         border-radius: 20px;
-        font-size: $fontSizeA;
+        font-size: 1.2rem;
         display: flex;
         justify-content: center;
         align-items: center;
         text-align: center;
+        padding: 8px;
+        cursor: pointer;
         text-decoration: none;
         color: $azulEscuro;
         font-weight: bold;
