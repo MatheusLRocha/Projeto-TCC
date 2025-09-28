@@ -91,12 +91,18 @@ header {
 
 .calc-resp {
     position: absolute;
-    width: 300px;
-    height: 450px;
+    // width: 300px;
+    // height: 450px;
+    @include mainContainer(21.2rem, 90%, 59.3rem, 31.2rem, 80%, 34.3rem, 20px);
+    padding: 10px;
     background-color: white;
     justify-content: center;
     align-items: center;
     border-radius: 15px;
+
+    & .icon {
+        font-size: clamp(1rem, calc(3vw + 1rem), 2.3rem);
+    }
 
     section {
         display: flex;
@@ -339,6 +345,7 @@ header {
 
 .main-criadores {
     // @include mainContainer(90%, 500px, 15px);
+    @include mainContainer(21.2rem, 90%, 59.3rem, 23.7rem, 90%, 31.2rem, 30px);
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
@@ -355,8 +362,10 @@ header {
         color: black;
 
         & .player {
-            width: 120px;
-            height: 120px;
+            // width: 120px;
+            // height: 120px;
+            width: clamp(7.5rem, 8vw, 15.6rem);
+            height: clamp(7.5rem, 8vw, 15.6rem);
             border-radius: 5px;
             transition: all 0.3s;
 
@@ -513,6 +522,23 @@ header {
         flex-direction: row;
         justify-content: center;
         flex-wrap: wrap;
+    } 
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .main-criadores {
+        & .player-item {
+            & .player {
+                width: clamp(10rem, 30vw, 11.2rem);
+                height: clamp(10rem, 30vw, 11.2rem);
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .calc-resp {
+        @include mainContainer(21.2rem, 90%, 61.2rem, 31.2rem, 80%, 35.6rem, 20px);
     }
 }
 

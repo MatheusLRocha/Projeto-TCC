@@ -1,7 +1,7 @@
 import { Menu, CircleUserRound, ArrowRightToLine, X } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useState } from "react";
-import { faArrowRight, faBars, faUser } from "@fortawesome/free-solid-svg-icons";
+import { faArrowRight, faBars, faUser, faXmark } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 
@@ -51,7 +51,7 @@ const Header = ({ title, iconH, onClickToggle }) => {
 
           
         ) : iconH === 'exit' ? (
-          <X className="icon" size={32} onClick={onClickToggle}/>
+          <FontAwesomeIcon className="icon" icon={faXmark} onClick={onClickToggle}/>
         ) : '' }
       </header>
     </>
