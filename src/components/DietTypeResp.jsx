@@ -245,7 +245,7 @@ const DietTypeResp = ({ classActive, onClick, dType, values, tipo }) => {
 
     return(
         <>
-            <div className={`container-types ${classActive}`}>
+            <div className={`diet-resp ${classActive}`}>
                 <Header title={dType.toUpperCase()} iconH={'exit'} onClickToggle={onClick}/>
                 <article>
                     <p>{ values }</p>
