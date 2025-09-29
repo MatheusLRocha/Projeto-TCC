@@ -567,6 +567,64 @@ header {
 }
 
 @media screen and (min-width: 1024px) {
+    .main-container {
+        & a {
+            transition: all 0.2s ease-in;
+        }
+
+        & a:hover {
+            transform: translateY(5px);
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.295);
+        }
+
+        & a:active {
+            transform: translateY(8px);
+        }
+    }
+
+    .main-dieta {
+        & .diet-button {
+            transition: all 0.2s ease-in;
+        }
+
+        & .diet-button:hover {
+            transform: translateY(5px);
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.295);
+        }
+
+        & .diet-button:active {
+            transform: translateY(8px);
+        }
+
+        & .container-types button {
+            transition: all 0.2s ease-in;
+        }
+
+        & .container-types button:hover {
+            transform: translateY(5px);
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.295);
+        }
+
+        & .container-types button:active {
+            transform: translateY(8px);
+        }
+    }
+
+    .main-exercise, .main-suplement {
+        & .btnExercise, .btnSuplement {
+            transition: all 0.2s ease-in;
+        }
+
+        & .btnExercise:hover, .btnSuplement:hover {
+            transform: translateY(5px);
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.295);
+        }
+
+        & .btnExercise:active, .btnSuplement:active {
+            transform: translateY(8px);
+        }
+    }
+
     .container-criador {
         &:hover {
             color: white;

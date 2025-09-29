@@ -99,6 +99,7 @@ header #menuIcon {
   align-items: center;
   gap: 10px;
   z-index: 1000;
+  transition: opacity 0.3s;
 }
 .menu.menu-disabled {
   display: none;
@@ -639,6 +640,46 @@ header #menuIcon {
   }
 }
 @media screen and (min-width: 1024px) {
+  .main-container a {
+    transition: all 0.2s ease-in;
+  }
+  .main-container a:hover {
+    transform: translateY(5px);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.295);
+  }
+  .main-container a:active {
+    transform: translateY(8px);
+  }
+  .main-dieta .diet-button {
+    transition: all 0.2s ease-in;
+  }
+  .main-dieta .diet-button:hover {
+    transform: translateY(5px);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.295);
+  }
+  .main-dieta .diet-button:active {
+    transform: translateY(8px);
+  }
+  .main-dieta .container-types button {
+    transition: all 0.2s ease-in;
+  }
+  .main-dieta .container-types button:hover {
+    transform: translateY(5px);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.295);
+  }
+  .main-dieta .container-types button:active {
+    transform: translateY(8px);
+  }
+  .main-exercise .btnExercise, .main-exercise .btnSuplement, .main-suplement .btnExercise, .main-suplement .btnSuplement {
+    transition: all 0.2s ease-in;
+  }
+  .main-exercise .btnExercise:hover, .main-exercise .btnSuplement:hover, .main-suplement .btnExercise:hover, .main-suplement .btnSuplement:hover {
+    transform: translateY(5px);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.295);
+  }
+  .main-exercise .btnExercise:active, .main-exercise .btnSuplement:active, .main-suplement .btnExercise:active, .main-suplement .btnSuplement:active {
+    transform: translateY(8px);
+  }
   .container-criador:hover {
     color: white;
   }
