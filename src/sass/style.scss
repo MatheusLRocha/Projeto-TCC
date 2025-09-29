@@ -329,7 +329,7 @@ header {
 
         & a {
             min-height: 120px;
-            width: 120px;
+            width: 150px;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -338,8 +338,8 @@ header {
             padding: 10px;
 
             & img {
-                width: 150px;
-                height: 150px;
+                width: 140px;
+                height: 140px;
             }
         }
     }
@@ -568,9 +568,9 @@ header {
 
 @media screen and (min-width: 1024px) {
     .container-criador {
-            &:hover {
-                color: white;
-            }
+        &:hover {
+            color: white;
+        }
 
         & .card_link::before {
             content: "";

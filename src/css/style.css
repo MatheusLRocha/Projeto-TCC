@@ -22,6 +22,21 @@
   border-radius: 12px;
   border: none;
 }
+.container-cad_log button {
+  width: 8.7rem;
+  height: 3.1rem;
+  background-color: #124580;
+  border-radius: 5px;
+  border: none;
+  color: white;
+  font-size: clamp(1.1rem, 3vw, 1.5rem);
+  cursor: pointer;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -435,7 +450,7 @@ header #menuIcon {
 }
 .sup-resp article a {
   min-height: 120px;
-  width: 120px;
+  width: 150px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -444,8 +459,8 @@ header #menuIcon {
   padding: 10px;
 }
 .sup-resp article a img {
-  width: 150px;
-  height: 150px;
+  width: 140px;
+  height: 140px;
 }
 
 .sup-resp header {
