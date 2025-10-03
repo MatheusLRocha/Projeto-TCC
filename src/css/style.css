@@ -59,7 +59,7 @@ header #menuIcon {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 10px;
+  gap: 20px;
   z-index: 1000;
   transition: opacity 0.3s;
 }

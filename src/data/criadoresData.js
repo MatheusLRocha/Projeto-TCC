@@ -60,10 +60,7 @@ const criadores = [
         id: 3,
         nome: 'João Reis',
         redes: [
-            {
-                tipo: 'Instagram', 
-                link: 'https://www.instagram.com/jo.reis18?utm_source=ig_web_button_share_sheet&igsh=dGJzcnA2YWFhMDBm',
-            },
+            
         ],
         fotos: {
             fotoPerfilReal: JoaoRostoImg,
