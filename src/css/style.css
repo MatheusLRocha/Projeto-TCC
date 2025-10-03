@@ -657,18 +657,12 @@ header #menuIcon {
     transform: translateY(5px);
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.167);
   }
-  .main-container a:active {
-    transform: translateY(8px);
-  }
   .main-dieta .diet-button {
     transition: all 0.2s ease-in;
   }
   .main-dieta .diet-button:hover {
     transform: translateY(5px);
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.167);
-  }
-  .main-dieta .diet-button:active {
-    transform: translateY(8px);
   }
   .main-dieta .container-types button {
     transition: all 0.2s ease-in;
@@ -677,18 +671,12 @@ header #menuIcon {
     transform: translateY(5px);
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.167);
   }
-  .main-dieta .container-types button:active {
-    transform: translateY(8px);
-  }
   .main-exercise .btnExercise, .main-exercise .btnSuplement, .main-suplement .btnExercise, .main-suplement .btnSuplement {
     transition: all 0.2s ease-in;
   }
   .main-exercise .btnExercise:hover, .main-exercise .btnSuplement:hover, .main-suplement .btnExercise:hover, .main-suplement .btnSuplement:hover {
-    transform: translateY(5px);
+    transform: translateY(3px);
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.167);
-  }
-  .main-exercise .btnExercise:active, .main-exercise .btnSuplement:active, .main-suplement .btnExercise:active, .main-suplement .btnSuplement:active {
-    transform: translateY(8px);
   }
   .container-criador:hover {
     color: white;
@@ -714,6 +702,18 @@ header #menuIcon {
   }
 }
 @media screen and (min-width: 1280px) {
+  .menu .menu-title .menu-icon {
+    transition: all 0.3s;
+  }
+  .menu .menu-title .menu-icon:hover {
+    transform: scale(1.1);
+  }
+  .icon {
+    transition: all 0.3s;
+  }
+  .icon:hover {
+    transform: scale(1.1);
+  }
   .main-container {
     display: flex;
     width: clamp(21.2rem, 90%, 62.5rem);

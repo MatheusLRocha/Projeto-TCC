@@ -583,9 +583,6 @@ header {
             box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.167);
         }
 
-        & a:active {
-            transform: translateY(8px);
-        }
     }
 
     .main-dieta {
@@ -598,10 +595,6 @@ header {
             box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.167);
         }
 
-        & .diet-button:active {
-            transform: translateY(8px);
-        }
-
         & .container-types button {
             transition: all 0.2s ease-in;
         }
@@ -609,10 +602,6 @@ header {
         & .container-types button:hover {
             transform: translateY(5px);
             box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.167);
-        }
-
-        & .container-types button:active {
-            transform: translateY(8px);
         }
     }
 
@@ -622,12 +611,8 @@ header {
         }
 
         & .btnExercise:hover, .btnSuplement:hover {
-            transform: translateY(5px);
+            transform: translateY(3px);
             box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.167);
-        }
-
-        & .btnExercise:active, .btnSuplement:active {
-            transform: translateY(8px);
         }
     }
 
@@ -661,7 +646,45 @@ header {
 }
 
 @media screen and (min-width: 1280px) {
+    // header {
+    //     & .icon {
+    //         & a {
+    //             transition: all 0.3s;
+    //         }
 
+    //         & a:hover {
+    //             transform: scale(1.1);
+    //         }
+    //     }
+
+    //     & #menuIcon {
+    //         transition: all 0.3s;
+    //     }
+
+    //     & #menuIcon:hover {
+    //         transform: scale(1.1);
+    //     }
+    // }
+
+    .menu {
+        & .menu-title {
+            & .menu-icon {
+                transition: all 0.3s;
+            }
+
+            & .menu-icon:hover {
+                transform: scale(1.1);
+            }
+        }
+    }
+
+    .icon {
+        transition: all 0.3s;
+    }
+
+    .icon:hover {
+        transform: scale(1.1);
+    }
 
     .main-container {
         @include mainContainer(21.2rem, 90%, 62.5rem, 31.2rem, 80%, 40.6rem, 70px); 
