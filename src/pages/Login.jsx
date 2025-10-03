@@ -39,7 +39,7 @@ const Login = () => {
                     <input type="password" id="inPassword" value={password} onChange={(e) => setPassword(e.target.value)}/>
                 </div>
                 <button onClick={handleLogin}>Entrar</button>
-                <Link to={"/cadastro"} style={{color: "#124580", textDecoration: 'none'}}>Não tenho uma conta</Link>
+                <Link to={"/cadastro"}>Não tenho uma conta</Link>
                 {message && <p>{message}</p>}
             </div>
         </>

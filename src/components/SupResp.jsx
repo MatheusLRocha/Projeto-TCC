@@ -10,8 +10,9 @@ const SupResp = ({ classActive, results, onClick }) => {
                     {
                        <>
                             <div>
-                                <h3>{results.nome}</h3>
+                                <h2>{results.nome}</h2>
                                 <p>{results.texto}</p>
+                                <h3>Dicas de {results.nome}:</h3>
                             </div>
                             <article>
                                 {

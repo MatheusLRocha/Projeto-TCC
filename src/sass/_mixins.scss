@@ -5,6 +5,47 @@
     gap: $gap;
 }
 
+@mixin cadastroLogin($widthMinimum, $widthIdeal, $widthMaximum, $heightMinimum, $heightIdeal, $heightMaximum, $gap) {
+    height: clamp($heightMinimum, $heightIdeal, $heightMaximum);
+    width: clamp($widthMinimum, $widthIdeal, $widthMaximum);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: $azulEscuro;
+    gap: $gap;
+
+    & .input-container {
+        width: 100%;
+        
+
+        & p {
+            font-size: 1.1em
+        }
+
+        & input {
+            width: 100%;
+            padding-left: 10px;
+            height: 50px;
+            border-radius: 12px;
+            border: none;
+        }
+    }
+
+    
+
+    & button {
+        // @include btn(120px, 50px, 1.2rem)
+        @include btn(6.2rem, 8.7rem, 9.3rem, 2.5rem, 3.1rem, 5rem, 3vw);
+    }
+
+    & a {
+        color: $azulEscuro;
+        text-align: underline;
+        font-size: 1.2rem;
+    }
+}
+
 @mixin btn($widthMinimum, $widthIdeal, $widthMaximum, $heightMinimum, $heightIdeal, $heightMaximum, $fontSize) {
     width: clamp($widthMinimum, $widthIdeal, $widthMaximum);
     height: clamp($heightMinimum, $heightIdeal, $heightMaximum);

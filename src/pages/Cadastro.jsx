@@ -57,7 +57,7 @@ const Cadastro = () => {
                     <input type="password" id="" />
                 </div> */}
                 <button onClick={handleCadastro}>Cadastrar</button>
-                <Link to={"/"} style={{color: "#124580", textDecoration: 'none'}}>Fazer login</Link>
+                <Link to={"/"} >Fazer login</Link>
                 {message && <p>{message}</p>}
             </div>
         </>
