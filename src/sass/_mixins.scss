@@ -76,6 +76,11 @@
         font-weight: 800;
     }
 
+    & .logo-icon {
+        position: absolute;
+        border-radius: 12px;
+    }
+
     & div.icon {
         display: flex;
         flex-direction: column;

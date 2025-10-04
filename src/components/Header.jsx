@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 import { faArrowRight, faBars, faUser, faXmark } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import starFitnessLogo from '../img/starFitness-favicon.jpg';
 
 const Header = ({ title, iconH, onClickToggle }) => {
   const [menuClass, setMenuClass] = useState('disabled');
@@ -21,6 +22,7 @@ const Header = ({ title, iconH, onClickToggle }) => {
   return (
     <>
       <header>
+        <img src={starFitnessLogo} alt="Logo Tcc StarFitness" className="logo-icon"/>
         <h1>{title}</h1>
         {iconH === "usuario" ? (
           <>

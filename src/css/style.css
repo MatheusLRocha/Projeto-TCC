@@ -30,6 +30,10 @@ header h1 {
   font-size: clamp(1.2rem, 2vw, 4rem);
   font-weight: 800;
 }
+header .logo-icon {
+  position: absolute;
+  border-radius: 12px;
+}
 header div.icon {
   display: flex;
   flex-direction: column;
@@ -40,6 +44,11 @@ header .icon {
   position: absolute;
   right: 20px;
   cursor: pointer;
+}
+header .logo-icon {
+  width: 45px;
+  height: 40px;
+  left: 10px;
 }
 header .icon a {
   font-size: clamp(1rem, 3vw + 1rem, 2.3rem);
@@ -702,6 +711,11 @@ header #menuIcon {
   }
 }
 @media screen and (min-width: 1280px) {
+  header .logo-icon {
+    width: 80px;
+    height: 60px;
+    left: 20px;
+  }
   .menu .menu-title .menu-icon {
     transition: all 0.3s;
   }

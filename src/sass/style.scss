@@ -23,6 +23,12 @@
 header {
    @include header(1.2rem, 2vw, 4rem);
 
+   & .logo-icon {
+        width: 45px;
+        height: 40px;
+        left: 10px;
+   }
+
    & .icon {
     & a {
         font-size: clamp(1rem, calc(3vw + 1rem), 2.3rem);
@@ -665,6 +671,14 @@ header {
     //         transform: scale(1.1);
     //     }
     // }
+
+    header {
+        & .logo-icon {
+            width: 80px;
+            height: 60px;
+            left: 20px;
+        }
+    }
 
     .menu {
         & .menu-title {
