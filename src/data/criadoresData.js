@@ -48,7 +48,7 @@ const criadores = [
             },
             {
                 tipo: 'Steam', 
-                link: 'https://s.team/p/gcvm-qtgc/qwdccvtq',
+                link: 'https://steamcommunity.com/profiles/76561199066037569/',
             }
         ],
         fotos: {
@@ -81,7 +81,7 @@ const criadores = [
             },
             {
                 tipo: 'Steam', 
-                link: 'https://s.team/p/gkpg-kqkd/cmmhnnkc',
+                link: 'https://steamcommunity.com/profiles/76561199162227570/',
             },
         ],
         fotos: {

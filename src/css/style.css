@@ -718,7 +718,7 @@ header #menuIcon {
     display: flex;
     width: clamp(21.2rem, 90%, 62.5rem);
     height: clamp(31.2rem, 80%, 40.6rem);
-    gap: 70px;
+    gap: 50px;
   }
   .main-calculator {
     display: grid;
@@ -759,7 +759,7 @@ header #menuIcon {
   }
   .diet-resp {
     display: flex;
-    width: clamp(21.2rem, 90vw, 61.2rem);
+    width: clamp(21.2rem, 90vw, 62.5rem);
     height: clamp(31.2rem, 80vh, 34.3rem);
     gap: 20px;
   }

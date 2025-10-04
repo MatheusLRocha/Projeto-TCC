@@ -687,7 +687,7 @@ header {
     }
 
     .main-container {
-        @include mainContainer(21.2rem, 90%, 62.5rem, 31.2rem, 80%, 40.6rem, 70px); 
+        @include mainContainer(21.2rem, 90%, 62.5rem, 31.2rem, 80%, 40.6rem, 50px); 
     }
 
     .main-calculator {
@@ -725,7 +725,7 @@ header {
     }
 
     .diet-resp {
-        @include mainContainer(21.2rem, 90vw, 61.2rem, 31.2rem, 80vh, 34.3rem, 20px);
+        @include mainContainer(21.2rem, 90vw, 62.5rem, 31.2rem, 80vh, 34.3rem, 20px);
 
         & article {
             & .alimentos {
