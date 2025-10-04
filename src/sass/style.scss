@@ -21,7 +21,7 @@
 }
 
 header {
-   @include header(1.2rem, calc(2vw + 1rem), 4rem);
+   @include header(1.2rem, 2vw, 4rem);
 
    & .icon {
     & a {
@@ -31,7 +31,7 @@ header {
    }
 
    & #menuIcon {
-    font-size: clamp(1rem, calc(2vw + 1rem), 2.3rem);
+    font-size: clamp(1rem, 2vw, 2.3rem);
    }
 }
 
@@ -93,7 +93,7 @@ header {
     position: absolute;
     // width: 300px;
     // height: 450px;
-    @include mainContainer(21.2rem, 90%, 59.3rem, 31.2rem, 80%, 34.3rem, 20px);
+    @include mainContainer(21.2rem, 90%, 62.5rem, 31.2rem, 80%, 34.3rem, 20px);
     margin-top: 15px;
     padding: 10px;
     background-color: white;
@@ -740,6 +740,10 @@ header {
     .main-exercise, .main-suplement {
         @include mainContainer(21.2rem, 90%, 53.1rem, 23.7rem, 90%, 34.3rem, 70px);
     }
+
+    .exerc-resp, .sup-resp {
+        @include mainContainer(21.2rem, 90vw, 62.5rem, 31.2rem, 80vh, 34.3rem, 20px);
+    }    
 
     .main-criadores {
         gap: 70px;

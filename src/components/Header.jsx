@@ -4,7 +4,6 @@ import { useState } from "react";
 import { faArrowRight, faBars, faUser, faXmark } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-
 const Header = ({ title, iconH, onClickToggle }) => {
   const [menuClass, setMenuClass] = useState('disabled');
   const [menuActive, setMenuActive] = useState(false);
