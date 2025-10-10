@@ -60,7 +60,10 @@ const criadores = [
         id: 3,
         nome: 'João Reis',
         redes: [
-            
+            {
+                tipo: 'Whatsapp',
+                link: 'https://wa.me/+5514996790586',
+            }
         ],
         fotos: {
             fotoPerfilReal: JoaoRostoImg,
