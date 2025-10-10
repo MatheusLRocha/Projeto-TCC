@@ -16,9 +16,9 @@ const CalculatorItem = ({ label, step, element, idS, value, onChange }) => {
             ) : (
               <>
                 <option value=""></option>
-                <option value="1.3">1.3</option>
-                <option value="1.5">1.5</option>
-                <option value="1.7">1.7</option>
+                <option value="1.3">Sedentário</option>
+                <option value="1.5">Moderado</option>
+                <option value="1.7">Intenso</option>
               </>
             )}
           </select>
