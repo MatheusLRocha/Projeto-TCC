@@ -468,21 +468,47 @@ header #menuIcon {
   justify-content: center;
   align-items: center;
 }
-.sup-resp article a {
+.sup-resp article .sup-item {
   min-height: 120px;
   width: 150px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: #a2e5f7;
   border-radius: 12px;
   padding: 10px;
+  position: relative;
 }
-.sup-resp article a img {
+.sup-resp article .sup-item img {
   width: 140px;
   height: 140px;
 }
+.sup-resp article .sup-item button {
+  width: 100px;
+  height: 30px;
+  border-radius: 5px;
+  border: 2px solid black;
+  font-size: clamp(1rem, 3vw, 1.1rem);
+  background-color: #124580;
+  color: white;
+}
 
+.upDown {
+  animation: upDown 1.8s infinite ease-out;
+}
+
+@keyframes upDown {
+  0% {
+    transform: translateY(-3px);
+  }
+  50% {
+    transform: translateY(2px);
+  }
+  100% {
+    transform: translateY(-3px);
+  }
+}
 .sup-resp header {
   position: sticky;
   top: 0;
@@ -491,6 +517,7 @@ header #menuIcon {
   z-index: 100;
   padding: 10px 0;
   margin: 0;
+  margin-top: 15px;
 }
 
 .exerc-resp.active, .sup-resp.active {
@@ -712,8 +739,8 @@ header #menuIcon {
 }
 @media screen and (min-width: 1280px) {
   header .logo-icon {
-    width: 80px;
-    height: 60px;
+    width: 130px;
+    height: 80px;
     left: 20px;
   }
   .menu .menu-title .menu-icon {
@@ -792,6 +819,11 @@ header #menuIcon {
     width: clamp(21.2rem, 90vw, 62.5rem);
     height: clamp(31.2rem, 80vh, 34.3rem);
     gap: 20px;
+  }
+  .sup-resp article .sup-item button {
+    width: 120px;
+    height: 40px;
+    cursor: pointer;
   }
   .main-criadores {
     gap: 70px;

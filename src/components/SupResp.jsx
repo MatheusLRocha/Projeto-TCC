@@ -17,9 +17,12 @@ const SupResp = ({ classActive, results, onClick }) => {
                             <article>
                                 {
                                     results.referencias.map((referencia, index) => (
-                                        <a href={referencia.link} key={index} target="_blank" rel="noopener noreferrer">
+                                        <div className="sup-item">
                                             <img src={referencia.imagem} alt={`Imagem ${results.nome} ${index}`}/>
-                                        </a>
+                                            <a href={referencia.link} key={index} target="_blank" rel="noopener noreferrer" >
+                                                <button className="btnSup upDown">Clique aqui!</button>
+                                            </a>
+                                        </div>
                                     ))
                                 }
                             </article>

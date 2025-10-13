@@ -339,21 +339,52 @@ header {
         align-items: center;
        
 
-        & a {
+        & .sup-item {
             min-height: 120px;
             width: 150px;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             background-color: $azulClaro;
             border-radius: 12px;
             padding: 10px;
+            position: relative;
 
             & img {
                 width: 140px;
                 height: 140px;
             }
+
+            & button {
+                width: 100px;
+                height: 30px;
+                border-radius: 5px;
+                border: 2px solid black;
+                font-size: clamp(1rem, 3vw, 1.1rem);
+                background-color: $azulEscuro;
+                color: white;
+                
+            }
         }
+    }
+}
+
+.upDown {
+    animation: upDown 1.8s infinite ease-out;
+}
+
+@keyframes upDown {
+    0% {
+        transform: translateY(-3px);
+    }
+
+    50% {
+        transform: translateY(2px);
+    }
+
+    100% {
+        transform: translateY(-3px);
     }
 }
 
@@ -365,6 +396,7 @@ header {
     z-index: 100;
     padding: 10px 0;
     margin: 0;
+    margin-top: 15px;
 }
 
 .exerc-resp.active, .sup-resp.active {
@@ -674,8 +706,8 @@ header {
 
     header {
         & .logo-icon {
-            width: 80px;
-            height: 60px;
+            width: 130px;
+            height: 80px;
             left: 20px;
         }
     }
@@ -758,6 +790,18 @@ header {
     .exerc-resp, .sup-resp {
         @include mainContainer(21.2rem, 90vw, 62.5rem, 31.2rem, 80vh, 34.3rem, 20px);
     }    
+
+    .sup-resp {
+        & article {
+            & .sup-item {
+                & button {
+                    width: 120px;
+                    height: 40px;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
 
     .main-criadores {
         gap: 70px;
