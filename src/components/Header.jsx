@@ -22,7 +22,9 @@ const Header = ({ title, iconH, onClickToggle }) => {
   return (
     <>
       <header>
-        <img src={starFitnessLogo} alt="Logo Tcc StarFitness" className="logo-icon"/>
+        <Link to={'/inicio'} className="linkLogo">
+          <img src={starFitnessLogo} alt="Logo Tcc StarFitness" className="logo-icon"/>
+        </Link>
         <h1>{title}</h1>
         {iconH === "usuario" ? (
           <>

@@ -2,6 +2,9 @@ import { useParams } from "react-router-dom";
 import Header from "../components/Header";
 import criadores from "../data/criadoresData";
 import CardLink from "../components/CardLink";
+import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 
 const CriadorCard = () => {
   const { id } = useParams(); // Retorna o id da barra de pesquisa como string
@@ -34,16 +37,22 @@ const CriadorCard = () => {
       )} */}
       <div className="container_criador">
         <div className="criador">
-          <div className="foto_perfil">
-            <img
-              src={criador.fotos.fotoPerfilQualquer}
-              alt={`foto de perfil do criador ${criador.nome}`}
-            />
+          <Link to="/criadores" className="backCreatorsIcon">
+            <FontAwesomeIcon icon={faArrowLeft} />
+          </Link>
+          <div className="containerFotoPerfil">
+            <div className="foto_perfil">
+              <img
+                src={criador.fotos.fotoPerfilQualquer}
+                alt={`foto de perfil do criador ${criador.nome}`}
+              />
+            </div>
+            <h1>
+              {criador.nome}
+            </h1>
           </div>
-          <h1>
-            {criador.nome}
-          </h1>
         </div>
+        
         <div className="card_links" >
           {criador.redes.map((rede, index) => (
             <CardLink

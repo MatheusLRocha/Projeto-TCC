@@ -17,7 +17,7 @@ const Basal = () => {
     const [allResp, setAllResp] = useState([]);
 
     useEffect(() => {
-        setAllResp([`Taxa Metabólica Basal: ${tmb}`, `Taxa Metabólica Total: ${tmt}`]);
+        setAllResp([`A Taxa Metabólica Basal é a quantidade mínima que seu corpo precisa para funcionar`, 'A Taxa Metabólica Total é a quantidade de calorias que seu corpo queima em um dia', `Sua Taxa Metabólica Basal: ${tmb}`, `Sua Taxa Metabólica Total: ${tmt}`]);
     }, [tmb, tmt]);
 
     const calcular = () => {

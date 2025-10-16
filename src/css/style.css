@@ -45,6 +45,11 @@ header .icon {
   right: 20px;
   cursor: pointer;
 }
+header .linkLogo {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
 header .logo-icon {
   width: 45px;
   height: 40px;
@@ -511,7 +516,7 @@ header #menuIcon {
 }
 .sup-resp header {
   position: sticky;
-  top: 0;
+  top: 0px;
   width: 100%;
   background-color: white;
   z-index: 100;
@@ -571,27 +576,36 @@ header #menuIcon {
   gap: 20px;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
   position: relative;
   z-index: 1;
 }
 .container_criador .criador {
   width: 100%;
+  display: grid;
+  grid-template-columns: 10% 90%;
+  justify-items: center;
+  align-items: center;
+}
+.container_criador .criador .containerFotoPerfil {
   display: flex;
-  gap: 30px;
   justify-content: center;
   align-items: center;
+  gap: 10px;
 }
 .container_criador .criador .foto_perfil {
   width: 70px;
   height: 70px;
-  background-color: #124580;
   border-radius: 100%;
 }
 .container_criador .criador .foto_perfil img {
   width: 100%;
   height: 100%;
   border-radius: 100%;
+}
+.container_criador .backCreatorsIcon {
+  font-size: clamp(1.1rem, 10vw, 1.8rem);
+  color: #124580;
+  justify-self: flex-start;
 }
 .container_criador .card_links {
   background-color: rgba(255, 255, 255, 0.432);
@@ -743,6 +757,12 @@ header #menuIcon {
     height: 80px;
     left: 20px;
   }
+  header .linkLogo {
+    transition: all 0.2s;
+  }
+  header .linkLogo:hover {
+    transform: scale(1.1);
+  }
   .menu .menu-title .menu-icon {
     transition: all 0.3s;
   }
@@ -831,6 +851,12 @@ header #menuIcon {
   .main-criadores .player-item .player {
     width: clamp(7.5rem, 8vw, 11.2rem);
     height: clamp(7.5rem, 8vw, 11.2rem);
+  }
+  .container_criador .backCreatorsIcon {
+    transition: all 0.3s;
+  }
+  .container_criador .backCreatorsIcon:hover {
+    transform: scale(1.1);
   }
 }
 
